@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Squirrels are our friends</title>
+  <meta name="description"
+    content="Fact-based evidence proving that squirrels are our friends.">
+
+  <!-- Normalize CSS - each browser will have its own styles for displaying HTML 
+    elements. Normalize CSS will reset the browser styles so your page will look 
+    the same across all browsers. It's not required for this assignment, but it 
+    will be once we start CSS. It can't hurt to add it now. -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+  <!-- temporary styles -- move to stylesheet on next assignment -->
+  <style>
+    picture img {
+      width: 100%;
+    }
+
+    /* this is to limit the size of the SVG. You can also add a width and height to the SVG element, but once we start CSS, it's easier to use CSS. 
+      
+      If you want to change the color of the SVG using CSS, remove the stroke property from the SVG declaration */
+    header svg {
+      stroke: #916247;
+      width: 40px;
+      height: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a>Home</a></li>
+
+        <!-- notice that the path is a relative path; that is, it does not 
+          begin with a forward slash / . This makes the path relative to the
+          location of index.html.  
+          
+          The path ends with a / to indicate that the path is a directory 
+          (you can leave off the ending /, but the browser
+          will first look for a file of that name, then a directory) -->
+        <li><a href="about/">About</a></li>
+        <li><a href="form/">Form</a></li>
+      </ul>
+    </nav>
+
+    <!-- I am referencing the inline SVG as a symbol. You can always
+         paste the SVG markup directly into the HTML. Symbols make it
+         easier to reuse SVGs -->
+    <svg>
+      <use href="#menu-icon" />
+    </svg>
+    <p>Above is an inline SVG. It will probably make its way to a mobile menu
+      later.</p>
+  </header>
+
+  <!-- the hero image as a picture -->
+  <picture>
+    <source srcset="images/hero-1600.jpg" media="(min-width: 901px)">
+    <source srcset="images/hero-900.jpg" media="(min-width: 501px)">
+    <source srcset="images/hero-500.jpg" media="(max-width: 500px)">
+
+    <img src=" images/hero-900.jpg"
+      alt="brown squirrel on a green landscape background">
+  </picture>
+  <main>
+
+    <h1>Squirrels are our friends</h1>
+
+    <article>
+      <h2>Not what they seem</h2>
+      <p>Have you spent your entire life afraid of squirrels? I know I have! I'm
+        here to reassure you that squirrels are
+        not evil vermin or government robot spies. Squirrels are our friends!
+      </p>
+
+      <p>Hopefully, this website will provide you with enough fact-based
+        research to PROVE that we should never fear
+        squirrels.</p>
+    </article>
+
+    <!-- since image is "below the fold" or offscreen when the pages loads, I've
+        added lazy loading -->
+    <figure>
+      <img src="images/red-squirrel.jpg" alt="front view of a cute red squirrel"
+        loading="lazy">
+      <figcaption>What a cute friendly squirrel!</figcaption>
+    </figure>
+    <article>
+      <!-- Notice that the external link is a description of what you will find at the link. Avoid "click here" and other meaningless phrases. -->
+      <h2>Government Friends</h2>
+      <p>Squirrels spy on us? No, we spy on them. You can <a
+          href="https://www.balmoralcastle.com/squirrel.htm">watch the live
+          squirrel cam at Balmoral Castle</a> to see that if these creatures
+        were evil, they would have taken over the United Kingdom by now. <em>Any
+          rumors that squirrels are behind Scotland's break from the UK are
+          absolutely false.</em></p>
+    </article>
+  </main>
+
+  <aside>
+    <h2>Tips for encounters</h2>
+    <p>If you happen upon a squirrel, we recommend you take the following steps
+      to ingratiate yourself with them:</p>
+
+    <!-- the different list types were required for the previous assignment, but you
+     can remove any if they don't fit with your website -->
+    <ul>
+      <li>Fill your pockets with nuts and/or roll smear peanut butter on your
+        face (if you are allergic to peanuts, other nut butters such as almond
+        or cashew are fine).</li>
+      <li>Find a lone squirrel and slowly approach it</li>
+
+      <li>Maintain eye contact with the squirrel at all times</li>
+      <li>Hold a nut with both hands and nibble on it &ndash; <strong>this is
+          key to squirrel friendship</strong></li>
+      <li>Make loud clicking noise to assure the squirrel that you are an equal.
+        You might want to practice these noises and the nibbling before you
+        encounter a squirrel &ndash; <em>find our instructional videos on
+          YouTube</em></li>
+
+      <li>Once you are within two feet of the squirrel, yell, as loudly as
+        possible, <strong>"Please be my friend!"</strong></li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>Squirrels &ndash; nothing to be afraid of</p>
+  </footer>
+  <svg>
+    <symbol id="menu-icon" viewbox="0 0 120 120">
+      <line x1="6" y1="42" x2="114" y2="42" stroke-width="8"
+        stroke-linecap="round" />
+      <line x1="6" y1="78" x2="114" y2="78" stroke-width="8"
+        stroke-linecap="round" />
+    </symbol>
+  </svg>
+</body>
+
+</html>
